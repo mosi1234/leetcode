@@ -1,0 +1,24 @@
+暴力法：
+遍历每个元素，并查找是否存在两个值之和与目标元素相等。
+时间复杂的：O(n^2)
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        vector<int> twoSum;                     //创建空向量
+        for(int i = 0 ; i < n;i++)
+        {
+            for(int j = i + 1 ; j < n ; j++)
+            {
+                if(nums[i] + nums[j] == target)
+                {
+                    twoSum.push_back(i); 
+                    twoSum.push_back(j); 
+                }
+            }
+            
+        }
+        return twoSum;
+    }
+};
